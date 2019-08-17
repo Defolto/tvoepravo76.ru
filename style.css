@@ -1,3 +1,6 @@
+p{
+    color: #506370;
+}
 body{
     overflow-x: hidden !important;
     width: 100%;
@@ -12,15 +15,135 @@ body{
     height: 400px;
     background-position-x: right; 
 }
+.contact{
+    color: black !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav-item{
+    font-size: 20px;
+    padding-right: 30px !important; 
+    transition: .6s;
+    font-weight: 600;
+}
+.nav-item:hover{
+    color: #1e5dc6 !important;
+}
+#slovo, #tire{
+    font-size: 21px;
+}
 .title{
     border-bottom: 1px solid black;
     padding-bottom: 2px;  
+    font-size: 40px;
+    color: #173950;
 }
 .block{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .block > p:nth-child(1){
     text-align: center;
     margin-bottom: 0px !important;
     font-weight: 600;
+    font-size: 27px;
+    color: #1e5dc6;
+}
+.block > p:nth-child(2){
+    font-size: 18px;
+}
+.About{
+    border-bottom: 2px solid black;
+}
+.About:nth-child(2){
+    border-left: 2px solid black;
+    background: url(img/exp.jpg);
+    background-size: cover;
+}
+.fonAbout{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.fonAbout:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+.About:nth-child(3){
+    background: url(img/clients.jpg);
+    background-size: cover;
+    border-left: 2px solid black;
+    background-position-y: center; 
+}
+.About:nth-child(4){
+    background: url(img/const.jpg);
+    background-size: cover;
+    border-left: 2px solid black;
+    background-position-y: center;
+}
+.AboutName{
+    font-size: 35px;
+    font-weight: 700;
+    color: #1e5dc6;
+}
+.fonAbout div p{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+    color: #4b4b4b;
+}
+.fonAbout:hover div p{
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    cursor: default;
+}
+.button{
+    background-color: rgba(57, 159, 255, 0.623);
+    cursor: pointer;
+    transition: .6s;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.button:hover{
+    color: white;
+}
+.card-body{
+    height: 150px;
+}
+.spectrum{
+    border: 1px solid rgb(126, 126, 126);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+div > h3{
+    border-bottom: 1px solid gray;
+    padding-bottom: 3px;
+}
+#form{
+    background: url(img/form.jpg);
+    background-position-x: right;
+    background-size: cover;
+}
+.whitefon{
+    background-color: rgba(0, 0, 0, 0.707);
+    height: 100%;
+    width: 100%;
+}
+.line{
+    background-color: transparent;
+    border: 0px solid white;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    border-radius: 0px;
+    color: white;
+    width: 70%;
+    transition: .7s;
+}
+.line:hover{
+    border-bottom: 1px solid white;
+}
+.line:focus, .line:active{
+    outline-offset: 0;
+    outline: none !important;
+    border-bottom: 1px solid rgb(108, 252, 79);
 }
