@@ -40,12 +40,12 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid" id="fon">
+    <div class="container-fluid zoomIn" id="fon">
         <div class="row pl-5">
             <div class="col-md-6 text-white py-5">
                 <h2>Сложная помощь — простым людям</h2>
                 <span id="slovo"></span><span id="tire">|</span><br>
-                <button type="button" class="btn btn-primary btn-lg mt-5">Заказать консультацию</button>
+                <button type="button" class="btn btn-primary btn-lg mt-5 hvr-ripple-out">Заказать консультацию</button>
             </div>
             <div class="col-md-6">
                 
@@ -91,32 +91,33 @@
         </div>
         <div class="row px-4">
             <div class="col-md-4">
-                <div class="block px-4">
+                <div class="block px-4 left">
                     <p>Опыт</p>
                     <p>Наша деятельность началась с 2009 года. За это время мы успели более подробно и тщательно изучить свою сферу деятельности для успешных дел</p>
                 </div>
-                <div class="block px-4">
+                <div class="block px-4 left">
                     <p>Бесплатные консультации</p>
                     <p>Любой наш клиент всегда имеет право на бесплатную, устную консультацию по его делу</p>
                 </div>
-                <div class="block px-4">
+                <div class="block px-4 left">
                     <p>Цены</p>
                     <p>Мы никогда не завышаем цены на ровном месте! Цена всегда зависит от сложности вашего дела</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <img src="img/femida.png" alt="" srcset="" width="70%">
+                <img src="img/femida.png" alt="" srcset="" width="70%"><br>
+                <p id="target1"></p>
             </div>
             <div class="col-md-4">
-                <div class="block px-4">
+                <div class="block px-4 right">
                     <p>Гибкость</p>
                     <p>Всегда подстраиваемся под интересы и возможности наших клиентов. Возможность выезда на дом</p>
                 </div>
-                <div class="block px-4">
+                <div class="block px-4 right">
                     <p>Отлаженная работа</p>
                     <p>Четкие схемы нашей работы выверены и отточены многолетней практикой, поэтому любое Ваше дело ждёт успех</p>
                 </div>
-                <div class="block px-4">
+                <div class="block px-4 right">
                     <p>Комплексный подход</p>
                     <p>Наши клиенты всегда получают полноценный комплекс услуг, который относится к их проблеме</p>
                 </div>
@@ -219,19 +220,23 @@
     <div class="container-fluid bg-light pt-4">
         <div class="row">
             <div class="col-md-6">
-                <h4 class="text-center mb-5">4 шага к вашему успеху</h4>
+                <div class="row px-5 mb-4 d-flex justify-content-center">
+                    <h3 class="title px-2">4 шага к вашему успеху</h3>
+                </div>
                 <div class="row">
                     <div class="col-md-6 text-center">
                         <div class="media mb-4">
                             <img src="img/numeration/1.png" class="mr-3" alt="...">
                             <div class="media-body">
-                                Вы связывайтесь с нами любым удобным для Вас способом 
+                                <p>Вы связывайтесь с нами любым удобным для Вас способом</p>
                             </div>
                         </div>
                         <div class="media mb-4">
                             <img src="img/numeration/3.png" class="mr-3" alt="...">
                             <div class="media-body">
-                                Готовим за Вас все необходимые документы для успешного дела
+                                <p>
+                                    Готовим за Вас все необходимые документы для успешного дела
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -239,33 +244,38 @@
                         <div class="media mb-4">
                             <img src="img/numeration/2.png" class="mr-3" alt="...">
                             <div class="media-body">
-                                Мы анализируем ваш вопрос и предоставляем подробную консультацию 
+                                <p>
+                                    Мы анализируем ваш вопрос и предоставляем подробную консультацию
+                                </p> 
                             </div>
                         </div>
                         <div class="media mb-4">
                             <img src="img/numeration/4.png" class="mr-3" alt="...">
                             <div class="media-body">
-                                После подготовки всех документов вместе с Вами решаем ваши проблемы
+                                <p>
+                                    После подготовки всех документов вместе с Вами решаем ваши проблемы
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center foto">
                 <img src="img/men.png" alt="" srcset="" width="70%">
             </div>
         </div>
     </div>
+    <span id="target2"></span>
     <div class="container-fluid px-0" id="form">
         <div class="whitefon px-5">
             <div class="row d-flex justify-content-center">
-                <p class="mt-5 mb-0 reasons text-white text-center">Оставьте заявку прямо сейчас!</p><br>
+                <p class="mt-5 mb-0 reasons text-white text-center titleForm">Оставьте заявку прямо сейчас!</p><br>
             </div>
             <div class="row d-flex justify-content-center text-white">
-                <p class="reasons text-center">Наш менеджер свяжется с Вами в кратчайший срок</p>
+                <p class="reasons text-center text-white titleForm">Наш сотрудник свяжется с Вами в кратчайший срок</p>
             </div>
             <form action="mail.php" method="POST">
-                <div class="form-row text-white p-4">
+                <div class="form-row text-white p-4 forma">
                     <div class="col-md-6 mb-3 px-5">
                         <label for="validationDefault03" class="mb-0 mt-4">Имя</label><br>
                         <input type="text" class="line" id="validationDefault01" name="user_name" placeholder="" required><br>
@@ -285,26 +295,32 @@
                     </div>
                 </div>
             </form>
+            <span id="target3"></span>
             <div class="row pb-3">
                 <div class="col-md-4">
 
                 </div>
-                <div class="col-md-4 text-center text-white">
-                    <p>Все права защищены</p>
+                <div class="col-md-4 d-flex align-items-end justify-content-center">
+                    <p class="text-white">Все права защищены</p>
                 </div>
-                <div class="col-md-4 d-flex flex-row justify-content-end px-5">
-                    <a href="https://vk.com/yarzpp" target="blank" class="px-3">
-                        <img src="img/vk.png" alt="" width="40px">
-                    </a>
-                    <a href="viber://chat?number=79159759433" class="px-3">
-                        <img src="img/viber.png" alt="" width="40px">
-                    </a>
-                    <a href="https://wa.me/79159759433" class="px-3">
-                        <img src="img/whatsapp.png" alt="" width="40px">
-                    </a>
-                    <a href="tel:+79159759433" class="px-3">
-                        <img src="img/phone_PNG48920.png" alt="" width="40px">
-                    </a>
+                <div class="col-md-4 d-flex flex-column">
+                    <div class="text-center">
+                        <p class="text-white" style="font-size: 17px">Другие способы связи с нами:</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center">
+                        <a href="https://vk.com/yarzpp" target="blank" class="px-3">
+                            <img src="img/vk.png" alt="" width="40px">
+                        </a>
+                        <a href="viber://chat?number=79159759433" class="px-3">
+                            <img src="img/viber.png" alt="" width="40px">
+                        </a>
+                        <a href="https://wa.me/79159759433" class="px-3">
+                            <img src="img/whatsapp.png" alt="" width="40px">
+                        </a>
+                        <a href="tel:+79159759433" class="px-3">
+                            <img src="img/phone_PNG48920.png" alt="" width="40px">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
