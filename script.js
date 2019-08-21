@@ -76,6 +76,18 @@ function site(){
 }
 setTimeout(site, 500);
 
+c = 1
+function media(){
+    if(c != 5){
+        $(`.m${c}`).addClass('flipInX');
+        c++;
+    }
+    else{
+        return;
+    }
+    setTimeout(media, 350);
+}
+
 var target1 = $('#target1');
 var target2 = $('#target2');
 var target3 = $('#target3');
@@ -89,18 +101,22 @@ var scrollToElem2 = targetPos2 - winHeight2;
 var targetPos3 = target3.offset().top;
 var winHeight3 = $(window).height();
 var scrollToElem3 = targetPos3 - winHeight3;
+var flag = true;
 $(window).scroll(function(){
     var winScrollTop1 = $(this).scrollTop();
     if(winScrollTop1 > scrollToElem1){
-        $(".left").show().addClass('fadeInLeft');
-        $(".right").show().addClass('fadeInRight');
+        $(".left").addClass('fadeInLeft');
+        $(".right").addClass('fadeInRight');
     }
     var winScrollTop2 = $(this).scrollTop();
     if(winScrollTop2 > scrollToElem2){
-        $(".foto").show().addClass('fadeInRight');
+        if(flag){
+            media();
+            flag = !flag;
+        }    
     }
     var winScrollTop3 = $(this).scrollTop();
-    if(winScrollTop3 > scrollToElem3){
-        $(".forma").show().addClass('fadeInUpBig');
+    if(winScrollTop3 > scrollToElem3){    
+        $(".forma").addClass('fadeInUpBig');
     }
 });

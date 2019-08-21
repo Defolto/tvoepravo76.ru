@@ -11,10 +11,91 @@
 </head>
 <body>
 <div class="bag">
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                        <li class="nav-item w-50" style="padding: 0px !important">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Консультация в офисе</a>
+                        </li>
+                        <li class="nav-item w-50 px-0" style="padding: 0px !important">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Выезд в удобное для Вас место</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afff71bd83b30736c4f66c3458a2b0ee49ab9fad505873caf160da58d093885b3&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
+                                <img src="img/close.png" class="close" data-dismiss="modal" alt="" width="50px">
+                                <form action="mail.php" method="POST">
+                                    <div class="form-row px-3 py-4">
+                                        <div class="col-md-6 mb-4">
+                                            <label for="validationDefault03" class="mb-0 mt-4">Имя:</label><br>
+                                            <input type="text" class="w-75 formPole"  id="validationDefault01" name="user_name" placeholder="" required><br>
+                                            <label for="validationDefault03" class="mb-0 mt-4">Фамилия:</label><br>
+                                            <input type="text" class="w-75 formPole" id="validationDefault02" name="user_name" placeholder="" required><br>
+                                            <label for="validationDefault05" class="mb-0 mt-4">Телефон:</label><br>
+                                            <input type="text" class="w-75 formPole" id="validationDefault03" name="user_phone" placeholder="" required><br>
+                                            <label for="validationDefault04" class="mb-0 mt-4">Email:</label><br>
+                                            <input type="email" class="w-75 formPole" name="user_email" id="validationDefault04" placeholder="" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="" class="mb-0 mt-2">Ваш комментарий:</label><br>
+                                            <textarea  id="" class="w-75 formPole" name="user_text" rows="2"></textarea><br>
+                                            <label for="validationDefault03" class="mb-0 mt-4">Дата:</label><br>
+                                            <input type="date" id="start" name="trip-start"
+                                            value="2019-08-18"
+                                            min="2019-08-18" class="formPole"><br><br>
+                                            <p class="formText">*После отправки заявки вам перезвонят и уточнят время встречи</p>
+                                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <img src="img/close.png" class="close" data-dismiss="modal" alt="" width="50px">
+
+                                <form action="mail.php" method="POST">
+                                    <div class="form-row px-3 py-4">
+                                        <div class="col-md-6 mb-4">
+                                            <label for="validationDefault03" class="mb-0 mt-4">Имя:</label><br>
+                                            <input type="text" class="w-75 formPole"  id="validationDefault01" name="user_name" placeholder="" required><br>
+                                            <label for="validationDefault03" class="mb-0 mt-4">Фамилия:</label><br>
+                                            <input type="text" class="w-75 formPole" id="validationDefault02" name="user_name" placeholder="" required><br>
+                                            <label for="validationDefault05" class="mb-0 mt-4">Телефон:</label><br>
+                                            <input type="text" class="w-75 formPole" id="validationDefault03" name="user_phone" placeholder="" required><br>
+                                            <label for="validationDefault04" class="mb-0 mt-4">Email:</label><br>
+                                            <input type="email" class="w-75 formPole" name="user_email" id="validationDefault04" placeholder="" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="" class="mb-0 mt-2">Ваш комментарий:</label><br>
+                                            <textarea  id="" class="w-75 formPole" name="user_text" rows="2"></textarea><br>
+                                            <label for="validationDefault03" class="mb-0 mt-4">Дата:</label><br>
+                                            <input type="date" id="start" name="trip-start"
+                                            value="2019-08-18"
+                                            min="2019-08-18" class="formPole"><br>
+                                            <label for="validationDefault03" class="mb-0 mt-4">Адрес:</label><br>
+                                            <input type="text" class="w-75 formPole"  id="validationDefault01" name="user_name" placeholder="" required><br><br>
+                                            <p class="formText">*После отправки заявки вам перезвонят и уточнят время встречи</p>
+                                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     <div class="container-fluid px-4">
         <nav class="navbar navbar-expand-lg navbar-light px-4 py-4">
             <a class="navbar-brand" href="#">
-                <img src="img/лого посл.png" width="150" alt="">
+                <img src="img/logo.png" width="120" alt="">
               </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,9 +103,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Главная</a>
-                <a class="nav-item nav-link" href="#">О Нас</a>
-                <a class="nav-item nav-link" href="#">Новости</a>
-                <a class="nav-item nav-link" href="#">Контакты</a>
+                <a class="nav-item nav-link" href="About/">О Нас</a>
+                <a class="nav-item nav-link" href="News/">Новости</a>
+                <a class="nav-item nav-link" href="Contact/">Контакты</a>
                 </div>
             </div>
             <div class="navbar-text">
@@ -45,7 +126,7 @@
             <div class="col-md-6 text-white py-5">
                 <h2>Сложная помощь — простым людям</h2>
                 <span id="slovo"></span><span id="tire">|</span><br>
-                <button type="button" class="btn btn-primary btn-lg mt-5 hvr-ripple-out">Заказать консультацию</button>
+                <button type="button" class="btn btn-primary btn-lg mt-5 hvr-ripple-out" data-toggle="modal" data-target="#exampleModal">Заказать консультацию</button>
             </div>
             <div class="col-md-6">
                 
@@ -225,13 +306,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center">
-                        <div class="media mb-4">
+                        <div class="media m1 mb-4">
                             <img src="img/numeration/1.png" class="mr-3" alt="...">
                             <div class="media-body">
                                 <p>Вы связывайтесь с нами любым удобным для Вас способом</p>
                             </div>
                         </div>
-                        <div class="media mb-4">
+                        <div class="media m3 mb-4">
                             <img src="img/numeration/3.png" class="mr-3" alt="...">
                             <div class="media-body">
                                 <p>
@@ -241,7 +322,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <div class="media mb-4">
+                        <div class="media m2 mb-4">
                             <img src="img/numeration/2.png" class="mr-3" alt="...">
                             <div class="media-body">
                                 <p>
@@ -249,7 +330,7 @@
                                 </p> 
                             </div>
                         </div>
-                        <div class="media mb-4">
+                        <div class="media m4 mb-4">
                             <img src="img/numeration/4.png" class="mr-3" alt="...">
                             <div class="media-body">
                                 <p>
@@ -260,7 +341,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 text-center foto">
+            <div class="col-md-6 text-center">
                 <img src="img/men.png" alt="" srcset="" width="70%">
             </div>
         </div>

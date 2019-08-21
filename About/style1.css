@@ -1,0 +1,73 @@
+.fon{
+    background: url('img/fon.gif');
+    background-size: cover;
+    height: 450px; 
+    background-position-x: right; 
+    background-position-y: top; 
+}
+.textFon{
+    color: black;
+    font-size: 23px;
+}
+.fonAbout{
+    background-color: rgba(0, 0, 0, 0.473); 
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.fonAbout:hover{
+    background-color: rgba(0, 0, 0, 0.3); 
+    width: 100%;
+    height: 100%;
+}
+.shop{
+    background: url('img/shop.jpg');
+    background-size: cover;
+    height: 600px; 
+}
+.zkx{
+    background: url('img/zkx.jpg');
+    background-size: cover;
+    height: 300px; 
+    background-position-x: right; 
+}
+.house{
+    background: url('img/house.jpg');
+    background-size: cover;
+    height: 300px;
+    background-position-x: right;
+}
+.sud{
+    background: url('img/sud.jpg');
+    background-size: cover;
+    height: 300px; 
+    background-position-x: right;
+}
+.bank{
+    background: url('img/bank.jpg');
+    background-size: cover;
+    height: 200px; 
+    background-position-y: center;
+}
+.family{
+    background: url('img/family.jpg');
+    background-size: cover;
+    height: 200px; 
+    background-position-y: center;
+}
+.contract{
+    background: url('img/contract.jpg');
+    background-size: cover;
+    height: 200px; 
+    background-position-y: center;
+}
+.textBlock{
+    margin: auto;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 600;
+}
+span{
+    font-weight: 600;
+    color: black;
+}
