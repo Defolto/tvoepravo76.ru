@@ -87,10 +87,22 @@ function media(){
     }
     setTimeout(media, 350);
 }
+z = 1
+function spectrum(){
+    if(z != 5){
+        $(`.spectrum:nth-child(${z})`).addClass('zoomInDown');
+        z++;
+    }
+    else{
+        return;
+    }
+    setTimeout(spectrum, 350);
+}
 
 var target1 = $('#target1');
 var target2 = $('#target2');
 var target3 = $('#target3');
+var target4 = $('#target4');
 
 var targetPos1 = target1.offset().top;
 var winHeight1 = $(window).height();
@@ -101,12 +113,21 @@ var scrollToElem2 = targetPos2 - winHeight2;
 var targetPos3 = target3.offset().top;
 var winHeight3 = $(window).height();
 var scrollToElem3 = targetPos3 - winHeight3;
+var targetPos4 = target4.offset().top;
+var winHeight4 = $(window).height();
+var scrollToElem4 = targetPos4 - winHeight4;
 var flag = true;
+var flag1 = true;
 $(window).scroll(function(){
     var winScrollTop1 = $(this).scrollTop();
-    if(winScrollTop1 > scrollToElem1){
-        $(".left").addClass('fadeInLeft');
-        $(".right").addClass('fadeInRight');
+    if(window.innerWidth > 1500){
+        if(winScrollTop1 > scrollToElem1){
+            $(".left").addClass('fadeInLeft');
+            $(".right").addClass('fadeInRight');
+        }
+    }
+    else{
+        $(".block").css({'visibility' : 'visible'});
     }
     var winScrollTop2 = $(this).scrollTop();
     if(winScrollTop2 > scrollToElem2){
@@ -118,5 +139,17 @@ $(window).scroll(function(){
     var winScrollTop3 = $(this).scrollTop();
     if(winScrollTop3 > scrollToElem3){    
         $(".forma").addClass('fadeInUpBig');
+    }
+    var winScrollTop4 = $(this).scrollTop();
+    if(window.innerWidth > 1500){
+        if(winScrollTop4 > scrollToElem1){
+            if(flag1){
+                spectrum();
+                flag1 = !flag1;
+            }  
+        }
+    }
+    else{
+        $(".spectrum").css({'visibility' : 'visible'});
     }
 });
