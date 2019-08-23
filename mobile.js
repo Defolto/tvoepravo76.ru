@@ -17,3 +17,12 @@ if(wight < 1100){
     $('.whitefon').removeClass('px-5');
     $('.forma').removeClass('p-4');
 }
+if (wight < 950) {
+    $('#fon > .row').addClass('darkfon');
+}
+if (wight < 780) {
+    $('.right').addClass('text-center').removeClass('px-4');
+    $('.left').addClass('text-center').removeClass('px-4');
+    $('#padd').removeClass('px-4');
+    $('.spectrum').removeClass('m-5').addClass('m-4');
+}

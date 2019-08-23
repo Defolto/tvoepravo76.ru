@@ -385,6 +385,10 @@ body{
     animation: zoomInDown 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
     visibility: visible;
   }
-
+.darkfon{
+    background-color: #27272775 !important;
+    width: 100%;
+    height: 100%;
+}
   
   

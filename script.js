@@ -130,16 +130,27 @@ $(window).scroll(function(){
         $(".block").css({'visibility' : 'visible'});
     }
     var winScrollTop2 = $(this).scrollTop();
-    if(winScrollTop2 > scrollToElem2){
-        if(flag){
-            media();
-            flag = !flag;
-        }    
+    if(window.innerWidth > 1500){
+        if(winScrollTop2 > scrollToElem2){
+            if(flag){
+                media();
+                flag = !flag;
+            }    
+        }
+    }
+    else{
+        $(".media").css({'visibility' : 'visible'});
     }
     var winScrollTop3 = $(this).scrollTop();
-    if(winScrollTop3 > scrollToElem3){    
-        $(".forma").addClass('fadeInUpBig');
+    if(window.innerWidth > 1500){
+        if(winScrollTop3 > scrollToElem3){    
+            $(".forma").addClass('fadeInUpBig');
+        }
     }
+    else{
+        $(".forma").css({'visibility' : 'visible'});
+    }
+    
     var winScrollTop4 = $(this).scrollTop();
     if(window.innerWidth > 1500){
         if(winScrollTop4 > scrollToElem1){
